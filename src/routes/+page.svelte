@@ -1,2 +1,20 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    let title = "Gaming Information"
+
+    const updateTitle = () => {
+        title = "Gaming Information Updated"
+    }
+</script>
+
+<div>
+    <h1>{title}</h1>
+    <p>Content</p>
+    <input type="text" bind:value={title}>
+    <button on:click={updateTitle}>Change Title</button>
+</div>
+
+<style>
+    h1 {
+        color: blue;
+    }
+</style>
